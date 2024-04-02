@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+}
+body{
+    position: relative;
+}
+.bg1{
+    height:700px;
+    width:100%;
+    /*background-image: url("/image/B1.jpg");  /* Replace with your image path */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    
+}
+.logo{
+    overflow: hidden;
+    margin-left: 100px;
+    position: absolute;
+    
+}
+.logo2{
+    height:100px;
+    width: 100px;
+}
+/* Style for the navbar links */
+.topnav {
+    overflow: hidden;
+    margin-left: 35%;
+    position: relative;
+}
+
+.topnav a {
+    margin-top: 30px;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 20px;  
+}
+.logo a {
+    float: right;
+    color: #10b7ff;
+    text-align: center;
+    padding: 30px 5px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family:cursive; 
+    font-weight: bold;
+}
+.shedule{
+    margin-left: 10px;
+    background-color: rgb(74, 175, 175);
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.welcome{
+    width: auto;
+    background: rgba(119, 134, 80, 0.2);
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: 30%;
+    position: relative;
+    font-size: 55px;
+    margin-left: 500px;
+    padding-left: 10px;
+    
+}
+.welcome span{
+    text-align: center;
+}
+.container1{ 
+    height: auto;
+    width: auto;
+}
+.c{
+    position: relative;
+    background-color: #10b7ff;
+    height: 1500px;
+    width: auto;
+    margin-top: 380px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

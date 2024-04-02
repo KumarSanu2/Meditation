@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scence</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .cont .heading{
+            font-size: 3rem;
+            margin: 2rem 0;
+            text-transform: capitalize;
+            color: var(--purple);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: .2rem;
+            text-align: center;
+            text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .5);
+        }
+        .video-cont{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+        .video-cont .video{
+            height: 15rem;
+            width:25rem;
+            margin:2rem;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .video-cont .video video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        .video-cont .video video:hover{
+            transition: 02s linear;
+            transform: scale(1.3);
+        }
+        .video-cont .video .active{
+            position: fixed;
+            top:50%; left:50%;
+            transform: translate(-50%,-50%);
+            height:auto;
+            width:100%;
+            box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+            z-index: 1;
+        }
+        .video-cont .video .active:hover{
+            transition: none;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="heading">Sence gallery</div>
+        <div class="video-cont">
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V5.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V3.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V2.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V1.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V7.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V8.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V4.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V3.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+            <div class="video">
+                <video src="./image/V6.mp4"></video>
+            </div>
+
+        </div>
+    </div>
+<script>
+    var video=document.querySelectorAll('video')
+    video.forEach(play=> play.addEventListener('click',()=>{
+        play.classList.toggle('active');
+        if(play.paused){
+            play.play();
+        }else{
+            play.pause();
+            play.currentTime=0;
+        }
+        
+        
+
+    
+    }))
+</script> 
+</body>
+</html>
