@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relax and Breathe Portal</title>
+<link rel="stylesheet" href="breath.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Relax and Breathe</h1>
+    <div id="breathing-exercise">
+        <h2>Breathing Exercise</h2>
+        <button onclick="startBreathingExercise()">Start Exercise</button>
+        <button onclick="stopBreathingExercise()">Stop Exercise</button>
+        <div id="breath-display">Take a deep breath...</div>
+        <div id="breath-graphic">
+            <svg id="inhale" class="breath-phase" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#00b894"/>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff">Inhale</text>
+            </svg>
+            <svg id="hold1" class="breath-phase" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#6c5ce7"/>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff">Hold</text>
+            </svg>
+            <svg id="exhale" class="breath-phase" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#d63031"/>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff">Exhale</text>
+            </svg>
+            <svg id="hold2" class="breath-phase" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fdcb6e"/>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff">Hold</text>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<script src="breath.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(90deg, #4e9d53, #bcb750);
+
+        }
+        .AI{
+            text-align: center;
+            margin-top: 5%;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .chat-container {
+            width: 600px;
+            margin: 20px auto;
+            border: 1px solid #e69696;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #220808;
+        }
+        .chat-messages {
+            padding: 10px;
+            overflow-y: scroll;
+            height: 300px;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .user-message {
+            background-color: #f8f8f8;
+            padding: 5px 10px;
+            border-radius: 5px;
+            float: right;
+        }
+        .bot-message {
+            background-color: #f60e5b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            float: left;
+        }
+        .chat-input {
+            width: calc(100% - 20px);
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .send-button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            margin-left: 5%;
+            
+        }
+        .send-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="AI">
+        Talk With AI
+    </div>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages"><br>
+        </div>
+        <input type="text" class="chat-input" id="user-input" placeholder="Type your message...">
+        <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        var preLoadedResponses = {
+            "hello": "Hello!",
+            "how are you": "I'm doing well, thank you!",
+            "help": "Sure, I can help you with that.",
+            "bye": "Goodbye!"
+        };
+
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value.toLowerCase();
+            if (userInput.trim() === "") {
+                return;
+            }
+
+            var chatMessages = document.getElementById("chat-messages");
+            var userMessageElement = document.createElement("div");
+            userMessageElement.className = "message user-message";
+            userMessageElement.textContent = userInput;
+
+            chatMessages.appendChild(userMessageElement);
+
+            var botResponse = getMatchingBotResponse(userInput);
+            var botMessageElement = document.createElement("div");
+            botMessageElement.className = "message bot-message";
+            botMessageElement.textContent = botResponse;
+
+            chatMessages.appendChild(botMessageElement);
+
+            document.getElementById("user-input").value = "";
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getMatchingBotResponse(userInput) {
+            userInput = userInput.toLowerCase();
+            for (var key in preLoadedResponses) {
+                if (userInput.includes(key)) {
+                    return preLoadedResponses[key];
+                }
+            }
+            return "I'm sorry, I don't understand.";
+        }
+    </script>
+</body>
+</html>

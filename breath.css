@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./image/B3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {    
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#breath-display {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#breath-graphic {
+    display: flex;
+    justify-content: center;
+}
+
+.breath-phase {
+    width: 100px;
+    margin: 0 20px;
+}
+
+.breath-phase circle {
+    stroke: #797878;
+    stroke-width: 2;
+}
+
+.breath-phase text {
+    font-size: 16px;
+}
